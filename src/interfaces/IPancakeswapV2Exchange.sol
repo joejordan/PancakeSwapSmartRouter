@@ -2,23 +2,11 @@
 pragma solidity ^0.8.0;
 
 interface IPancakeswapV2Exchange {
- function getReserves()
- external
- view
- returns (
- uint112 _reserve0,
- uint112 _reserve1,
- uint32 _blockTimestampLast
- );
+    function getReserves() external view returns (uint112 _reserve0, uint112 _reserve1, uint32 _blockTimestampLast);
 
- function swap(
- uint256 amount0Out,
- uint256 amount1Out,
- address to,
- bytes calldata data
- ) external;
+    function swap(uint256 amount0Out, uint256 amount1Out, address to, bytes calldata data) external;
 
- function skim(address to) external;
+    function skim(address to) external;
 
- function sync() external;
+    function sync() external;
 }
